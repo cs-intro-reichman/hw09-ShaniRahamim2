@@ -28,8 +28,8 @@ public class List {
     }
 
     public void addFirst(char chr) {
-        CharData newData = new CharData(chr);
-        Node newNode = new Node(newData, first);
+        Node newNode = new Node(new CharData(chr));
+        newNode.next = first;
         first = newNode;
         size++;
     }
